@@ -25,7 +25,7 @@ function totalPagar(precioConsola){
     pagoTotal = precioConsola
 }
 
-alert('El total de tu pedido es de: ' + totalPagar())
+alert('El total de tu pedido es de: ' + totalPagar(pagoTotal))
 
 let direccion_envio = prompt('Ingrese la direccion a la que se enviara su pedido')
 
