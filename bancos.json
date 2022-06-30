@@ -1,0 +1,7 @@
+[
+    {"institucion": "Grupo Financiero Banorte", "nombre_banco":"Banorte", "localidad":"Mexico" },
+    {"institucion": "BBVA Mexico", "nombre_banco":"BBVA", "localidad":"Mexico" },
+    {"institucion": "HSBC Holdings", "nombre_banco":"HSBC", "localidad":"Mexico" },
+    {"institucion": "Banca Afirme", "nombre_banco":"Afirme", "localidad":"Mexico" },
+    {"institucion": "Scotiabank", "nombre_banco":"Scotiabank", "localidad":"Mexico" }
+]
