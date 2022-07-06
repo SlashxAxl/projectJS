@@ -9,11 +9,11 @@ const mostrarValue = (e) => {
     e.preventDefault()
     const nombreUsuario = document.getElementById('name').value
     const emailUsuario = document.getElementById('email').value
-if (nombreUsuario === "" || emailUsuario === "") {
+    if (nombreUsuario === "" || emailUsuario === "") {
 
-    alert('¡Porfavor ingresa tus datos para continuar!')
-    
-} else {
+        alert('¡Porfavor ingresa tus datos para continuar!')
+
+    } else {
         productos.forEach((producto) => {
             const card = document.createElement('div')
             card.className = 'card'
@@ -29,21 +29,22 @@ if (nombreUsuario === "" || emailUsuario === "") {
         const botonesCompra = document.querySelectorAll('.buttonCTA')
         console.log(botonesCompra)
         botonesCompra.forEach((botonCompra) => {
-        botonCompra.addEventListener('click', agregarProducto)
-    })
-}}
+            botonCompra.addEventListener('click', agregarProducto)
+        })
+    }
+}
 
 botonRegistro.addEventListener('submit', mostrarValue)
 
 let carrito = []
 const agregarProducto = (e) => {
     const productoElegido = e.target.getAttribute('data-id')
-    const producto = productos.find((producto) => producto.marca ==  productoElegido)
+    const producto = productos.find((producto) => producto.marca == productoElegido)
     carrito.push(producto)
     localStorage.setItem('carrito', JSON.stringify(carrito))
-  }
+}
 
-document.querySelector('#finalizarCompra').addEventListener('click',()=>{
+document.querySelector('#finalizarCompra').addEventListener('click', () => {
     carrito = []
     localStorage.setItem('carrito', JSON.stringify(carrito))
     Toastify({
@@ -56,17 +57,17 @@ document.querySelector('#finalizarCompra').addEventListener('click',()=>{
         position: "left",
         stopOnFocus: true,
         style: {
-        background: "linear-gradient(to right, #00b09b, #96c93d)",
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
         },
-        onClick: function(){}
+        onClick: function () { }
     }).showToast();
 })
 
 
-const renderizarBancos = (data) =>{
+const renderizarBancos = (data) => {
     console.log(data)
 }
 
 fetch("./bancos.json")
-.then((res)=>res.json)
-.then((data)=>renderizarBancos(data))
+    .then((res) => res.json())
+    .then((data) => renderizarBancos(data))
