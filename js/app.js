@@ -48,9 +48,9 @@ document.querySelector('#finalizarCompra').addEventListener('click', () => {
     carrito = []
     localStorage.setItem('carrito', JSON.stringify(carrito))
     Toastify({
-        text: "Compra Finalizada!",
+        text: "Compra Finalizada! Clickea aqui para proceder al pago!",
         duration: 3000,
-        destination: "",
+        destination: "https://www.youtube.com/watch?v=mCdA4bJAGGk",
         newWindow: true,
         close: true,
         gravity: "top",
